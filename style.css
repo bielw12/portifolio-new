@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Noto Sans JP', sans-serif, Arial;
+}
+
+html, body{
+   scroll-behavior: smooth;
+}
+
+/* Comentario */
+nav{
+   background-color: #3359ec;
+   font-weight: 500;
+   position: fixed;
+   width: 100%;
+}
+
+nav ul{
+   list-style: none;
+   display: flex;
+   justify-content: center;
+}
+
+nav ul li{
+   padding: 1rem;
+}
+
+nav ul li a{
+   text-decoration: none;
+   color: #fff;
+}
+
+nav ul li a:hover {
+   color: #71aaff; 
+   background-color: #fff; 
+   padding: 0.6rem; 
+   border-radius: 0.5rem; 
+   transition: all 0.5s ease; 
+}
+
+header{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 3rem;
+}
+
+header div#img-rocket {
+   display: flex;
+   justify-content: center;
+}
+
+header div p{
+   font-size: 2vw;
+   font-weight: 700;
+   color: #3359ec;
+}
+
+header div span{
+   font-size: 1vw;
+   font-weight: 500;
+   color: #0066ff;
+}
+
+header div#img-rocket img{
+   width: 60%;
+}
+
+/* Seção sobre-mim */
+section#sobre-mim {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 4rem;
+   background-color: #3359ec;
+   color: white;
+}
+
+/* Container para organizar a imagem e o texto */
+section#sobre-mim .container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   max-width: 1200px;
+   flex-wrap: wrap;
+}
+
+/* Estilo da imagem */
+section#sobre-mim .sobre-mim-img {
+   flex: 1 1 300px; /* Flexível para se adaptar ao tamanho da tela */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 1rem;
+}
+
+section#sobre-mim .sobre-mim-img img {
+   width: 80%;
+   border-radius: 50%;
+   object-fit: cover;
+   border: 5px solid white; /* Borda branca para destacar a imagem */
+}
+
+/* Estilo do texto */
+section#sobre-mim .sobre-mim-text {
+   flex: 2 1 500px; /* Flexível com maior prioridade */
+   padding: 1rem;
+   margin: 1rem;
+}
+
+section#sobre-mim .sobre-mim-text h2 {
+   font-size: 2.5rem;
+   margin-bottom: 1.5rem;
+}
+
+section#sobre-mim .sobre-mim-text p {
+   font-size: 1.2rem;
+   line-height: 1.8rem;
+   margin-bottom: 1.5rem;
+   text-align: justify;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+   section#sobre-mim .container {
+      flex-direction: column;
+   }
+
+   section#sobre-mim .sobre-mim-img img {
+      width: 50%;
+      margin-bottom: 1rem;
+   }
+
+   section#sobre-mim .sobre-mim-text {
+      text-align: center;
+   }
+}
+
+@media screen and (max-width: 480px) {
+   section#sobre-mim .sobre-mim-img img {
+      width: 80%;
+   }
+
+   section#sobre-mim .sobre-mim-text h2 {
+      font-size: 2rem;
+   }
+
+   section#sobre-mim .sobre-mim-text p {
+      font-size: 1rem;
+   }
+}
+
+
+section#projetos {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+   padding: 3rem;
+   background-color: #f9f5eb;
+}
+
+section#projetos div {
+   width: 300px;
+   margin: 1rem;
+   background-color: #ffffff;
+   border-radius: 8px;
+   padding: 1.5rem;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+}
+
+section#projetos div:hover {
+   transform: scale(1.09);
+}
+
+section#projetos div img {
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+   border-radius: 8px;
+}
+
+section#projetos div h2 {
+   text-align: center;
+   margin: 1rem 0;
+   color: #3359ec;
+}
+
+section#projetos div p {
+   font-size: 1rem;
+   text-align: justify;
+   color: #555;
+}
+
+section#projetos div button {
+   display: block;
+   width: 100%;
+   padding: 1rem;
+   border: none;
+   background-color: #3359ec;
+   color: white;
+   font-size: 1rem;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   margin-top: 1rem;
+   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+section#projetos div button:hover {
+   background-color: #004fa0;
+   transform: scale(1.1);
+}
+
+/* Habilidades Técnicas */
+section#habilidades {
+   padding: 3rem;
+   background-color: #f9f5eb;
+   text-align: center;
+}
+
+section#habilidades h2 {
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+   color: #3359ec;
+}
+
+section#habilidades p {
+   font-size: 1.3rem;
+   font-weight: 600;
+}
+
+section#habilidades div {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 1rem 0;
+   padding: 0.5rem;
+   background-color: #fff;
+   border-radius: 1rem;
+}
+
+section#habilidades div span {
+   background-color: #3359ec;
+   color: white;
+   text-align: center;
+   padding: 0.5rem;
+   border-radius: 1rem;
+}
+
+section#habilidades div span#python {
+   width: 80%;
+}
+
+section#habilidades div span#html {
+   width: 50%;
+}
+
+section#habilidades div span#css {
+   width: 30%;
+}
+
+
+/* Seção de contato */
+
+section#contato {
+   padding: 3rem 10rem 3rem 10rem; /* Sentido horario: Cima, direita , baixo, esquerda */
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap; /* Quebra o conteúdo para a próxima linha caso não haja mais espaço para esse conteúdo na tela */
+}
+
+section#contato div#redes{
+   width: 100%; /* Faz com que a div rede ocupe 100% do espaço na tela */
+}
+
+section#contato div#redes h3{
+   text-align: center; /* Alinhamento centralizado do texto */
+   font-size: 2.5rem; /* Tamanho da fonte do elemento */
+   margin-bottom: 2rem; /* Margem para baixo do elemento */
+}
+
+section#contato div#redes div#icons{
+   display: flex;
+   justify-content: center;
+}
+
+section#contato div#redes div#icons a{
+   text-decoration: none; /* Tira o sublinhado e toda decoração de texto do link */
+   color: #0066ff;
+   font-size: 4rem;
+   padding: 2rem;
+   transition: all .4s ease-out; /*  Suavisa a transição de cores no hover */
+}
+
+/* o :hover serve para quando passar o mouse por cima do elemento fazer algo */
+section#contato div#redes div#icons a:hover{
+   color: #71aaff;
+}
+
+section#contato div#redes div#icons a i{
+   transition: all .4s ease-out;
+}
+
+/* O atributo transform só muda um elemento que aparece efetivamente na tela, por isso colocamos ele na tag i, e não na tag a */
+section#contato div#redes div#icons a i:hover{
+   transform: scale(1.2);
+}
+
+section#contato div#form{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+
+section#contato div#form h3{
+   width: 100%;
+   text-align: center;
+   font-size: 2.5rem;
+   margin-bottom: 2rem;
+}
+
+section#contato div#form form{
+   width: 50%;
+}
+
+/* A virgula serve para estilizar dois elementos ao mesmo tempo */
+section#contato div#form form input, textarea{
+   width: 100%;
+   padding: .5rem;
+   font-size: 1.2rem;
+   border: 1px solid #ccc;
+   margin-top: .5rem;
+   margin-bottom: 1rem;
+   outline: none; /* Retira a borda do input quando clico dentro dele */
+}
+
+section#contato div#form form label{
+   font-size: 1.2rem;
+}
+
+section#contato div#form form button{
+   border: 1px solid #3359ec;
+   background-color: #fff;
+   color: #3359ec;
+   padding: 1rem;
+   font-size: .8vw;
+   font-weight: 600;
+   border-radius: .5rem;
+   display: block;
+   margin: auto;
+   cursor: pointer;
+   transition: .6s ease-out;
+   width: 40%;
+}
+
+section#contato div#form form button:hover{
+   background-color: #3359ec;
+   color: #fff;
+   transform: scale(1.2);
+}
+
+.linha1 {
+   width: 100%;
+   height: 5px;
+   background-color: #3359ec;
+}
